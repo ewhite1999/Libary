@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    --highlight: #8F3985;
+    --dark: black;
+    --light: white;
+    --finished: green;
+    --not_finished: red;
+}
+html, body{
+    margin: 0 1em;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2em auto;
+    max-width: 1200px;
+}
+
+.btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.75em 1em;
+    color: var(--light);
+    font-size: 1.075rem;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.form_group{
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_group.radio_form{
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#add_to_library{
+    background-color: var(--highlight);
+    width: 100%;
+}
+
+.book_card{
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 0 1rem 2rem 1rem;
+    width: 250px;
+    height: calc(1.5 * 250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card_child{
+    text-align: center;
+}
+
+.book_author{
+    font-size: 2rem;
+}
+
+.book_title{
+    font-size: 1.5rem;
+}
+
+.book_read{
+    width: 85%;
+}
+
+.not_finished{
+    background-color: var(--not_finished);
+}
+
+.finished{
+    background-color: var(--finished);
+}
+.shelf{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 629px){
+    h1{
+        font-size: 4rem;
+    }
+    .shelf{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 911px){
+    h1{
+        font-size: 6rem;
+    }
+    .shelf{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+#book_form{
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.form_control{
+    font-size: 1.1rem;
+    width: 100%;
+}

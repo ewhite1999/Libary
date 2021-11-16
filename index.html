@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,35 +8,56 @@
     <title>Library</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <div class="container">
         <h1>My Library</h1>
-        <form id="book_form">
-            <div class="form_group">
-                <label for="title">Title:</label>
-                <input type="text" id="title" class="form_control">
+        <div class="shelf">
+            <div class="book_card">
+                <div class="book_author card_child">George R.R. Martin</div>
+                <div class="book_title card_child">A Storm of Swords <br> 2: Blood and Gold</div>
+                <button class="book_read card_child btn not_finished">Not Read</button>
             </div>
-            <div class="form_group">
-                <label for="author">Author:</label>
-                <input type="text" id="author" class="form_control">
+            <div class="book_card">
+                <div class="book_author card_child">George R.R. Martin</div>
+                <div class="book_title card_child">A Storm of Swords <br> 2: Blood and Gold</div>
+                <button class="book_read card_child btn not_finished">Not Read</button>
             </div>
-            <div class="form_group">
-                <label for="pages">Number of Pages:</label>
-                <input type="text" id="pages" class="form_control">
+            <div class="book_card">
+                <div class="book_author card_child">George R.R. Martin</div>
+                <div class="book_title card_child">A Storm of Swords <br> 2: Blood and Gold</div>
+                <button class="book_read card_child btn not_finished">Not Read</button>
             </div>
-            <div class="form_group">
-                <input type="radio" id="read">
-                <label for="read">Read</label>
-                <input type="radio" id="not_read">
-                <label for="not_read">Not Read</label>
+            <div class="book_card">
+                <div class="book_author card_child">George R.R. Martin</div>
+                <div class="book_title card_child">A Storm of Swords <br> 2: Blood and Gold</div>
+                <button class="book_read card_child btn finished">Read</button>
             </div>
-            <input type="submit" value="Add Book">
-        </form>
-        <div class="book_card">
-            <div class="book_author">George R.R. Martin</div>
-            <div class="book_title">A Storm of Swords 2: Blood and Gold</div>
-            <div class="book_pages">607</div>
-            <button class="book_read">No</button>
+            <form id="book_form" class="book_card">
+                <div class="form_group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" class="form_control" required>
+                </div>
+                <div class="form_group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" class="form_control" required>
+                </div>
+                <div class="form_group">
+                    <label for="pages">Number of Pages:</label>
+                    <input type="number" id="pages" class="form_control" required>
+                </div>
+                <div class="form_group radio_form">
+                    <div>
+                        <input type="radio" id="read" name="read_it" required>
+                        <label for="read">Read</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="not_read" name="read_it" required>
+                        <label for="not_read">Not Read</label>
+                    </div>
+                </div>
+                <input class="btn" id="add_to_library" type="submit" value="Add Book">
+            </form>
         </div>
     </div>
     <script src="./app.js"></script>
