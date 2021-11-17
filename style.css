@@ -76,6 +76,8 @@ h1{
 
 .card_child{
     text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 .book_author{
