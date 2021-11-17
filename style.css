@@ -91,7 +91,7 @@ h1{
 .finished{
     background-color: var(--finished);
 }
-.shelf{
+#shelf{
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -100,7 +100,7 @@ h1{
     h1{
         font-size: 4rem;
     }
-    .shelf{
+    #shelf{
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -109,7 +109,7 @@ h1{
     h1{
         font-size: 6rem;
     }
-    .shelf{
+    #shelf{
         grid-template-columns: repeat(3, 1fr);
     }
 }
