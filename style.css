@@ -4,16 +4,19 @@
     box-sizing: border-box;
 }
 :root{
-    --highlight: #8F3985;
-    --dark: black;
-    --light: white;
-    --finished: green;
-    --not_finished: red;
+    --highlight: #1D3557;
+    --dark: #1D3557;
+    --light: #F1FAEE;
+    --finished: #A8DADC;
+    --not_finished: #E63946;
+    --card: #457B9D
 }
 html, body{
     margin: 0 1em;
     padding: 0;
     font-family: 'Raleway', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
 }
 
 .container{
@@ -67,6 +70,8 @@ h1{
     align-items: center;
     justify-content: space-evenly;
     position: relative;
+    background-color: var(--card);
+    color:var(--light);
 }
 
 .card_child{
