@@ -42,6 +42,16 @@ const addBookToLibrary = (event) =>{
     closeBtns[closeBtns.length - 1].addEventListener('click', e =>{
         e.target.parentElement.remove();
     })
+    let readBtns = document.querySelectorAll('.book_read');
+    readBtns[readBtns.length - 1].addEventListener('click', e =>{
+        e.target.classList.toggle('finished');
+        e.target.classList.toggle('not_finished')
+        if(e.target.innerHTML == 'Read'){
+            e.target.innerHTML = 'Not Read';
+        } else{
+            e.target.innerHTML = 'Read';
+        }
+    })
 };
 // Waiting for the form to be submitted to run the functions
 form.addEventListener('submit', addBookToLibrary)
