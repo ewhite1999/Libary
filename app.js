@@ -8,8 +8,8 @@ const form = document.getElementById('book_form');
 const createBookItem = (author, title, read)=>{
     let outerDiv = document.createElement('div');
     outerDiv.className = 'book_card';
-    console.log(read ? "finished" : "not_finished")
     outerDiv.innerHTML = `
+        <button class="btn close">X</button>
         <div class="book_author card_child">${author}</div>
         <div class="book_title card_child">${title}</div>
         <button class="book_read card_child btn ${read ? "finished" : "not_finished"}">${read ? "Read" : "Not Read"}</button>
@@ -38,6 +38,10 @@ const addBookToLibrary = (event) =>{
     myLibrary.push(newBook);
     form.reset();
     displayLibrary();
+    let closeBtns = document.querySelectorAll('.close');
+    closeBtns[closeBtns.length - 1].addEventListener('click', e =>{
+        e.target.parentElement.remove();
+    })
 };
 // Waiting for the form to be submitted to run the functions
 form.addEventListener('submit', addBookToLibrary)
